@@ -1,3 +1,3 @@
-# React Redux Full Course for Beginners | Redux Toolkit Complete Tutorial by Dave Gray
+# Learn Redux Toolkit in 1 video with Project | React Redux Toolkit |Redux Toolkit Tutorial
 
-Youtube Video Line ==> https://www.youtube.com/watch?v=NqzdVN2tyvQ
+Youtube Video Line ==> https://www.youtube.com/watch?v=A_vRvDAZuOo
