@@ -3,16 +3,14 @@ import { Card } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { add } from "../store/cartSlice";
+import { getProducts } from "../store/productSlice";
+import { Spinner } from "react-bootstrap";
 const Product = () => {
-
-    const [products, setProducts] = useState([]);
     const dispatch = useDispatch();
-
+    const { data: products } = useSelector(state => state.products);
     useEffect(() => {
-        //api
-        fetch("https://fakestoreapi.com/products")
-            .then(data => data.json())
-            .then(result => setProducts(result));
+        //dispatch an action for fetch products
+        dispatch(getProducts());
     }, []);
 
     const addToCart = (product) => {
@@ -21,8 +19,8 @@ const Product = () => {
     }
 
     const cards = products.map(product => (
-        <div className="col-md-3" style={{ marginBottom: '10px' }}>
-            <Card key={product.id} className="h-100">
+        <div key={product.id} className="col-md-3" style={{ marginBottom: '10px' }}>
+            <Card className="h-100">
                 <div className="text-center">
                     <Card.Img variant="top" src={product.image} style={{ width: '100px', height: '130px' }} />
                 </div>
@@ -42,9 +40,16 @@ const Product = () => {
     return (
         <>
             <h1>Product Dashboard</h1>
-            <div className="row">
-                {cards}
-            </div>
+            {
+                products.length == 0 ? <div className="row justify-content-center align-items-center">
+                    <Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                </div> :
+                    <div className="row">
+                        {cards}
+                    </div>
+            }
         </>
     )
 }
