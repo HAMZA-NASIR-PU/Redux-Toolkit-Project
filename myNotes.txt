@@ -15,3 +15,5 @@ In redux toolkit, createSlice function will auto-generate the action type and ac
 THunk middleware is by default present in the store in redux toolkit.
 
 Redux only handles synchronous behaviour. To do asynchronous, use thunks in redux toolkit.
+
+https://stackoverflow.com/questions/74231200/can-you-clarify-the-use-of-thunks-in-redux-toolkit-a-few-specific-questions
