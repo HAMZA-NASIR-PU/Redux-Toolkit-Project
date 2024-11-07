@@ -1,1 +1,15 @@
-Redux toolkit should be inside the router
+Redux toolkit should be inside the router.
+
+https://redux.js.org/tutorials/fundamentals/part-1-overview
+
+https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
+
+"Reducer" functions get their name because they're similar to the kind of callback function you pass to the Array.reduce() method.
+
+You can think of dispatching actions as "triggering an event" in the application.
+
+we can mutate the state in a mutable manner in redux toolkit. This is due to immer.js.
+
+In redux toolkit, createSlice function will auto-generate the action type and action creator based on the name of the reducer function you provide.
+
+THunk middleware is by default present in the store in redux toolkit.
