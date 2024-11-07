@@ -25,7 +25,7 @@ const Cart = () => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer style={{ backgroundColor: 'white' }}>
-                    <Button variant="primary" onClick={() => removeToCart(product.id)}>Remove Item</Button>
+                    <Button variant="danger" onClick={() => removeToCart(product.id)}>Remove Item</Button>
                 </Card.Footer>
             </Card>
         </div>

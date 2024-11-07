@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { BsCart4 } from "react-icons/bs";
 const NavBar = () => {
 
     const cartProducts = useSelector(state => state.cart);
@@ -17,7 +18,7 @@ const NavBar = () => {
                 <Navbar.Toggle />
                 <Navbar.Collapse className='justify-content-end'>
                     <Navbar.Text>
-                        <Nav.Link to="/cart" as={Link}>My Bag {cartProducts.length}</Nav.Link>
+                        <Nav.Link to="/cart" as={Link}><BsCart4 size={30} /> {cartProducts.length}</Nav.Link>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
