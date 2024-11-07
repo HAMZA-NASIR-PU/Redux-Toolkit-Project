@@ -1,15 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from './logo.svg';
 import './App.css';
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider
-} from 'react-router-dom';
-function App() {
+import Product from './components/Product';
 
+function App() {
   return (
-    <App />
+    <div className="App">
+      <Product />
+    </div>
   );
 }
 
