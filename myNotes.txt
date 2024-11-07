@@ -13,3 +13,5 @@ we can mutate the state in a mutable manner in redux toolkit. This is due to imm
 In redux toolkit, createSlice function will auto-generate the action type and action creator based on the name of the reducer function you provide.
 
 THunk middleware is by default present in the store in redux toolkit.
+
+Redux only handles synchronous behaviour. To do asynchronous, use thunks in redux toolkit.
