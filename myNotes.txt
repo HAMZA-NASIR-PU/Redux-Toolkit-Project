@@ -17,3 +17,14 @@ THunk middleware is by default present in the store in redux toolkit.
 Redux only handles synchronous behaviour. To do asynchronous, use thunks in redux toolkit.
 
 https://stackoverflow.com/questions/74231200/can-you-clarify-the-use-of-thunks-in-redux-toolkit-a-few-specific-questions
+
+
+configureStore() by default enable Redux DevTool extensions. Also thunk middleware is present by default.
+
+In old redux, we need to manually handle and change the state immutably. But in redux toolkit, it provides the support for immer.js library which automatically changes the code immutably.
+
+In old redux, we need to create reducers and creators separately - lots of boilerplate code. But in redux toolkit, createSlice() function that comes in handy to replace create action and create reducer functions with a single function.
+
+In redux toolkit, createAsyncThunk is used to make asynchronous requests.
+
+Inredux toolkit, it provides functional implementation with typescript and support Hooks.
